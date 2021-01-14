@@ -9,25 +9,22 @@
 using std::cout;
 using std::endl;
 
-void print_neighbours(Node* n)
-{
+void print_neighbours(Node *n) {
     cout << "Anslutningar från " << n->getName() << "(" << n->getValue() << ") :\n";
-    for(auto de : n->getEdges()){
-        cout << de.getLength() << " to " << de.getDest()->getName() << endl;
+    for (auto de : n->getEdges()) {
+        cout << de.getLength() << " to " << de.getDestination()->getName() << endl;
     }
 }
 
-Node* find_and_test(const std::string& s, Graph& g)
-{
-    Node * n = g.find(s);
+Node *find_and_test(const std::string &s, Graph &g) {
+    Node *n = g.find(s);
     assert(n != nullptr);
     assert(n->getName() == s);
     assert(n->getValue() == Node::max_value);
     return n;
 }
 
-void test_graph()
-{
+void test_graph() {
     Graph g{};
 
     g.addNode("Lund");
@@ -46,14 +43,14 @@ void test_graph()
 
     n_lund->setValue(17);
     auto n2 = g.find("Lund");
-    assert(n2->getValue()==17);
+    assert(n2->getValue() == 17);
 
     auto n3 = g.find("Flyinge");
     n_flyinge->setValue(42);
-    assert(n3->getValue()==42);
+    assert(n3->getValue() == 42);
 
     g.resetVals();
-    for(auto it = g.begin(); it != g.end(); ++it){
+    for (auto it = g.begin(); it != g.end(); ++it) {
         assert((*it)->getValue() == Node::max_value);
     }
 
@@ -62,8 +59,7 @@ void test_graph()
 }
 
 
-int main()
-{
+int main() {
     test_graph();
     return 0;
 }

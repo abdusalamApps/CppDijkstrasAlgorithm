@@ -24,6 +24,7 @@ public:
 
     const std::vector<Edge>& getEdges() const;
 
+    static const int max_value{INT_MAX};
 private:
     std::string name;
     int value;
