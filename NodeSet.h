@@ -5,7 +5,7 @@
 #ifndef DIJKSTRASALGORITHM_NODESET_H
 #define DIJKSTRAS \
 ALGORITHM_NODESET_H
-#include <set>
+#include <vector>
 #include "Node.h"
 
 class NodeSet {
@@ -26,7 +26,7 @@ public:
     Node *removeMin();
 
 private:
-    std::set<Node*> nodes;
+    std::vector<Node*> nodes;
 };
 
 
