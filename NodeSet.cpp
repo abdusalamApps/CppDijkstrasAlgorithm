@@ -2,6 +2,7 @@
 // Created by kinga on 1/14/2021.
 //
 #include <algorithm>
+#include <iostream>
 
 #include "NodeSet.h"
 
@@ -23,9 +24,19 @@ bool NodeSet::isEmpty() {
 Node *NodeSet::removeMin() {
     if (nodes.empty())
         return nullptr;
-    auto it = std::min_element(nodes.begin(), nodes.end(), [](const Node *n1, Node *n2) {
-        return n1->getValue() < n2->getValue();
-    });
+    auto it = std::min_element(nodes.begin(), nodes.end(),
+                               [](const Node *n1, Node *n2) {
+                                   return n1->getValue() < n2->getValue();
+                               }
+    );
+
+    Node *n = *it;
     nodes.erase(it);
-    return *it;
+    return n;
+}
+
+void NodeSet::print() {
+    for (Node *n : nodes) {
+        std::cout << n->getName() << " " << n->getValue() << "\n";
+    }
 }

@@ -5,6 +5,7 @@
 #ifndef DIJKSTRASALGORITHM_NODESET_H
 #define DIJKSTRAS \
 ALGORITHM_NODESET_H
+
 #include <vector>
 #include "Node.h"
 
@@ -25,8 +26,10 @@ public:
      * Om mängden är tom returneras null. */
     Node *removeMin();
 
+    void print();
+
 private:
-    std::vector<Node*> nodes;
+    std::vector<Node *> nodes;
 };
 
 

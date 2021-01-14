@@ -14,8 +14,11 @@ int main() {
     Node lund{"Lund"};
     lund.setValue(9);
     Node dalby{"Dalby"};
+    dalby.setValue(10);
     Node sandby{"Sodra Sandby"};
+    sandby.setValue(11);
     Node hallestad{"Torna Hallestad"};
+    hallestad.setValue(12);
     Node flyinge{"Flyinge"};
     Node veberod{"Veberod"};
 
@@ -41,6 +44,13 @@ int main() {
     nodeSet.add(&flyinge);
     nodeSet.add(&veberod);
 
-    cout << nodeSet.removeMin()->getValue();
+    cout << "-----------------before remove---------------------\n";
+    nodeSet.print();
+    cout << "---------------------------------------------------\n";
+    Node n = *nodeSet.removeMin();
+    cout << "\nRemoved Node: " << n.getName() << " " << n.getValue() << "\n\n";
+    cout << "-----------------after remove---------------------\n";
+    nodeSet.print();
+    cout << "---------------------------------------------------\n";
     return 0;
 }
