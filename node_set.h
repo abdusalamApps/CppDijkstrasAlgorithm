@@ -7,7 +7,7 @@
 ALGORITHM_NODESET_H
 
 #include <vector>
-#include "Node.h"
+#include "node.h"
 
 class NodeSet {
 public:

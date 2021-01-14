@@ -5,10 +5,10 @@
 using std::cout;
 using std::endl;
 
-#include "Node.h"
-#include "Edge.h"
+#include "node.h"
+#include "edge.h"
 
-#include "NodeSet.h"
+#include "node_set.h"
 
 int main() {
     Node lund{"Lund"};

@@ -4,11 +4,9 @@
 #include <algorithm>
 #include <iostream>
 
-#include "NodeSet.h"
+#include "node_set.h"
 
-NodeSet::NodeSet() {
-
-}
+NodeSet::NodeSet() = default;
 
 void NodeSet::add(Node *node) {
     auto it = std::find(nodes.begin(), nodes.end(), node);

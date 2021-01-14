@@ -2,7 +2,7 @@
 // Created by kinga on 1/14/2021.
 //
 
-#include "Node.h"
+#include "node.h"
 
 Node::Node(const std::string &name): name{name}, value{INT_MAX} {
 

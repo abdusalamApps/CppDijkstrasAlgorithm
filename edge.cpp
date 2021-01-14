@@ -2,7 +2,7 @@
 // Created by kinga on 1/14/2021.
 //
 
-#include "Edge.h"
+#include "edge.h"
 
 Edge::Edge(Node *destination, int length)
         : destination{destination}, length{length} {

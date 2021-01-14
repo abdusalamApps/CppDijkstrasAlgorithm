@@ -2,6 +2,7 @@
 #include <cassert>
 #include "graph.h"
 #include "dijkstra.h"
+#include "node.h"
 
 using std::cout;
 using std::endl;

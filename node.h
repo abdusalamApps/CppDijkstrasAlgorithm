@@ -8,7 +8,7 @@
 #include <string>
 #include <vector>
 
-#include "Edge.h"
+#include "edge.h"
 
 class Node {
 public:
