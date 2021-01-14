@@ -26,5 +26,6 @@ Node *NodeSet::removeMin() {
     auto it = std::min_element(nodes.begin(), nodes.end(), [](const Node *n1, Node *n2) {
         return n1->getValue() < n2->getValue();
     });
+    nodes.erase(it);
     return *it;
 }
